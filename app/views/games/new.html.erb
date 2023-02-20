@@ -1,0 +1,17 @@
+<h1>new</h1>
+<%= @tab %>
+<div class="boom">
+  <% @tabs.each do |element| %>
+    <p class="letter"><%= element %></p>
+  <% end %>
+</div>
+
+<div class="boom">
+  <form action="/score" method="POST" data-turbo="false">
+    <input type="text" name="form">
+    <input type="submit" value="Envoyer!">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
+</div>
+
+<%= console %>
